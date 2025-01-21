@@ -1,6 +1,22 @@
 # Aprende funciones Lambda construyendo un registrador de gastos
+1. [Listas en Python](#1-listas-en-python)
+  1.1 [Métodos para listas](#11-métodos-para-listasmétodos-para-listas)
+    1.1.1 [append()](#append)
+    1.1.2 [insert()](#insert)
+    1.1.3 [filter()](#filter)
+    1.1.4 [map()](#map)
+    1.1.5 [pop()](#pop)
+    1.1.6 [sum()](#sum)
+  1.2 [Índices en las listas](#12-índices-en-las-listas)
+  1.3 [Mutabilidad](#mutabilidad)
+2. [Diccionarios](#2-diccionarios)
+  2.1 [Acceder a valores en diccionarios a través de su clave](#21-acceder-a-valores-en-diccionarios-a-través-de-su-clave)
+3. [Bucle `for` para una lista](#3-bucle-for-para-una-lista)
+4. [Funciones Lambda en Python](#4-funciones-lambda-en-python)
+5. [Bucle `while`](#5-bucle-while)
+6. [input()](#6-input)
 
-## Listas en Python
+## 1. Listas en Python
 
 `list` is a data type that works as a container for other values. I can c
 Las listas (`lists`) son un tipo de valor que almacena o contiene otros valores. 
@@ -13,7 +29,7 @@ Pueden ser valores del mismo tipo o de distinto tipo.
 Pueden tener listas embedidas dentro de las mismas. 
 - [1, 'a', 2, 'b', [ 1, 2, 3, 4 ]]
 
-### Métodos para listas
+### 1.1 Métodos para listas
 
 #### append()
 El método `append()` permite insertar elementos en una lista. Por default, lo agrega al final de la lista.
@@ -44,6 +60,17 @@ filter(función, lista)
 
 # función - función que da el criterio del filtro
 # lista - iterables que va a filtrar
+```
+
+#### map()
+La función `map()` ejecuta una función para cada item en un elemento iterable. 
+
+**Sintaxis**
+```python
+map(function, iterable)
+
+# function - requerido, función a ejecutar en cada item
+# iterable - requerido, una secuecia, colección u objeto iterable
 ```
 
 #### pop()
@@ -79,7 +106,7 @@ a = (1, 2, 3, 4, 5)
 x = sum(a, 7) # 22
 ```
 
-### Índices en las listas
+### 1.2 Índices en las listas
 Las listas tienen índices base 0. Esto quiere decir que el primer elemento empieza con 0, el siguiente con 1 y así consecutivamente. 
 
 Para accesar al elemento se utiliza la notación de corchetes: `list[index]`.
@@ -91,7 +118,7 @@ print(my_list[0]) # 1
 print(my_list[1]) # 2
 ```
 
-### Mutabilidad
+### 1.3 Mutabilidad
 Las listas son mutables. Esto quiere decir que se pueden modificar los elementos de las listas; se puede realizar a través de la notación de corchetes.
 
 ```python
@@ -100,7 +127,7 @@ my_list[0] = 0
 
 print(my_list) # [0, 2]
 ```
-## Diccionarios
+## 2 Diccionarios
 Los diccionaros se utilizan para guardar información en pares claves-valor.
 - Los valores tienen un orden y este no puede cambiar.
 - Son mutables.
@@ -115,7 +142,7 @@ thisdict = {
 }
 ```
 
-### Acceder a valores en diccionarios a través de su clave
+### 2.1 Acceder a valores en diccionarios a través de su clave
 ```python
 thisdict = {
   "brand": "Ford",
@@ -126,7 +153,7 @@ thisdict = {
 print(thisdict['brand']) # 'Ford'
 ```
 
-## Bucle `for` para una lista
+## 3. Bucle `for` para una lista
 Método para recorrer o iterar en una lista (aunque también sirve para otros valores como string, diccionario, set...)
 
 ```python
@@ -139,7 +166,7 @@ for x in fruits:
 # "cherry"
 ```
 
-## Funciones Lambda en Python
+## 4. Funciones Lambda en Python
 En Python, las funciones *lambda* son funciones breves y anónmas cuyo propósito es ejecutar tareas sencillas que solo se utilicen una vez. Se definen con la palabra *lambda*. Siguen la siguiente sintaxis:
 
 ```python
@@ -154,17 +181,23 @@ exampleFunction = lambda param1, param2 : param1 * param2
 print(exampleFunction(2,6)) # 12
 ```
 
-https://www.freecodecamp.org/espanol/news/funciones-lambda-en-python-ejemplos-de-sintaxis/
+## 5. Bucle `while`
+El bucle `while` es un bucle que recorre una parte del código siempre y cuando la condición sea verdadera; el bucle termina cuando la condición se vuelve falsa. 
 
-https://www.w3schools.com/python/python_lambda.asp
-
-### map()
-La función `map()` ejecuta una función para cada item en un elemento iterable. 
-
-**Sintaxis**
 ```python
-map(function, iterable)
+while condition:
+  <code>
+```
 
-# function - requerido, función a ejecutar en cada item
-# iterable - requerido, una secuecia, colección u objeto iterable
+## 6. input()
+El método `input()` permite que los usuarios ingresen información.
+
+```python
+# Sintaxis
+input(prompt) # prompt - una cadena de texto
+
+# Ejemplo
+
+x = input("Ingresa tu nombre") # <- Marissa
+print("Hola, " + x) # Hola, Marissa
 ```
